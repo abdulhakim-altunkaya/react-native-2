@@ -14,7 +14,7 @@ function ListItems() {
         {task: "ehu university"},
     ]
   return (
-    <View>
+    <View> 
         <FlatList
             data={tasks}
             keyExtractor={(element) => element.index} //I can use the index number of big element object.
