@@ -3,29 +3,26 @@ import { Text, View, TouchableOpacity,
   StyleSheet, Button} from 'react-native';
 
 
-function InitialScreen(props) {
+function InitialScreen({navigation}) {
   const changeRoute = () => {
-    props.navigation.navigate("Home");
+    navigation.navigate("Home");
   }
   const changeRoute2 = () => {
-    props.navigation.navigate("List5");
+    navigation.navigate("List5");
   }
   return (
     <View>
         <Text style={styles.text}>
-            InitialScreen
+            InitialScreen 2 dude - props destructured
         </Text>
         <Button 
           title="GO TO HOMEPAGE"
           onPress={()=> {changeRoute()}}
         />
-        <TouchableOpacity
-          onPress={() => {changeRoute2()}}
-        >
-          <Text>
-            Go To List Demo
-          </Text>
-        </TouchableOpacity>
+        <Button 
+          title="GO TO LIST PAGE"
+          onPress={()=> {changeRoute2()}}
+        />
 
     </View>
   )

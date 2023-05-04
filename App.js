@@ -5,6 +5,7 @@ import ComponentsScreen from "./src/screens/ComponentsScreen";
 import ListItems from "./src/screens/ListItems";
 import ListItems5 from "./src/screens/ListItems5";
 import InitialScreen from "./src/screens/InitialScreen";
+import InitialScreen2 from "./src/screens/InitialScreen2";
 
 const navigator = createStackNavigator(
   {
@@ -13,9 +14,10 @@ const navigator = createStackNavigator(
     List: ListItems,
     List5: ListItems5,
     Initial: InitialScreen,
+    Initial2: InitialScreen2,
   },
   {
-    initialRouteName: "Initial",
+    initialRouteName: "Initial2",
     defaultNavigationOptions: {
       title: "App",
     },
