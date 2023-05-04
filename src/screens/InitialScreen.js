@@ -3,7 +3,10 @@ import { Text, View, TouchableOpacity,
   StyleSheet, Button} from 'react-native';
 
 
-function InitialScreen() {
+function InitialScreen(props) {
+  const routeHome = () => {
+    props.navigation.navigate("Home");
+  }
   return (
     <View>
         <Text style={styles.text}>
@@ -11,7 +14,7 @@ function InitialScreen() {
         </Text>
         <Button 
           title="GO TO HOMEPAGE"
-          onPress={()=>{console.log("hey");}}
+          onPress={()=> props.navigation.navigate("Home")}
         />
         <TouchableOpacity
           onPress={() => {console.log("hey touchy");}}
