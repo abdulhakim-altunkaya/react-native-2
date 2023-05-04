@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View, StyleSheet, FlatList} from 'react-native';
+import { Text, View, TouchableOpacity,
+  StyleSheet, Button} from 'react-native';
 
 
 function InitialScreen() {
@@ -8,6 +9,18 @@ function InitialScreen() {
         <Text style={styles.text}>
             InitialScreen
         </Text>
+        <Button 
+          title="GO TO HOMEPAGE"
+          onPress={()=>{console.log("hey");}}
+        />
+        <TouchableOpacity
+          onPress={() => {console.log("hey touchy");}}
+        >
+          <Text>
+            Go To List Demo
+          </Text>
+        </TouchableOpacity>
+
     </View>
   )
 }
